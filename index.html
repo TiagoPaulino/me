@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Soluções Digitais | Programação & Produtos</title>
   <meta name="description" content="Desenvolvimento de sites, aplicativos, automações e soluções digitais sob medida. Programação prática e eficiente." />
+  <!-- Open Graph / WhatsApp -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Soluções Digitais & Programação" />
+<meta property="og:description" content="Sites, aplicativos, automações e soluções digitais práticas. Resposta rápida e escopo claro." />
+<meta property="og:image" content="https:/tiagopaulino.github.io/me/og-image.png" />
+<meta property="og:url" content="https:/tiagopaulino.github.io/me/" />
+<meta property="og:locale" content="pt_BR" />
+
+
+<!-- Twitter / fallback -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Soluções Digitais & Programação" />
+<meta name="twitter:description" content="Sites, aplicativos, automações e soluções digitais práticas." />
+<meta name="twitter:image" content="https:/tiagopaulino.github.io/me/og-image.png" />
+<meta name="description" content="Desenvolvimento de sites, aplicativos, automações e soluções digitais sob medida. Programação prática e eficiente." />
   <style>
     :root {
 /* Light theme (default – better readability) */
@@ -140,20 +155,21 @@
     }
   </style>
 </head>
-<body>
+<body class="ligth">
   <main class="container">
 
     <header>
       <div style="display:flex; align-items:center; gap:16px;">
         <!-- Foto de perfil (substitua profile.jpg pela sua foto) -->
-        <div class="tilt" style="
+        <div class="tilt" id="gyro-avatar" style="
             width:150px;
             height:150px;
             border-radius:50%;
             overflow:hidden;
             flex-shrink:0;
             box-shadow:0 8px 25px rgba(0,0,0,.4);
-            border:solid 2px white;">
+            border:solid 2px white;
+            will-change: transform">
           <img src="profile.jpg" alt="Foto do desenvolvedor" style="width:100%; height:100%; object-fit:cover;" />
         </div>
         <div>
@@ -208,5 +224,34 @@
       scale: 1.03
     });
   </script>
+  <script>
+/* Gyroscope / Device Orientation for avatar */
+        (function () {
+        const avatar = document.getElementById('gyro-avatar');
+        if (!avatar || !window.DeviceOrientationEvent) return;
+
+
+        function handleOrientation(event) {
+        const maxTilt = 8; // very subtle
+        const x = Math.max(-maxTilt, Math.min(maxTilt, event.beta / 10));
+        const y = Math.max(-maxTilt, Math.min(maxTilt, event.gamma / 10));
+        avatar.style.transform = `rotateX(${x}deg) rotateY(${y}deg)`;
+        }
+
+
+        // iOS permission
+        if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+        avatar.addEventListener('click', () => {
+        DeviceOrientationEvent.requestPermission().then(response => {
+        if (response === 'granted') {
+        window.addEventListener('deviceorientation', handleOrientation);
+        }
+        });
+        });
+        } else {
+        window.addEventListener('deviceorientation', handleOrientation);
+        }
+        })();
+</script>
 </body>
 </html>
