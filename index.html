@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soluções Digitais | Programação & Produtos</title>
+  <meta name="description" content="Desenvolvimento de sites, aplicativos, automações e soluções digitais sob medida. Programação prática e eficiente." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      /* Accent derived from photo (warm amber) */
+      --accent: #f59e0b;
+      --accent-soft: rgba(245,158,11,0.35);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, sans-serif;
+      background: linear-gradient(180deg, #020617, var(--bg));
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 720px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    header {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.3);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    section {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.3);
+    }
+
+    section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+
+    ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    ul li {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .cta {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .cta a {
+      display: inline-block;
+      width: 100%;
+      text-decoration: none;
+      background: linear-gradient(135deg, var(--accent), #fbbf24);
+      color: #020617;
+      padding: 14px;
+      border-radius: 12px;
+      font-weight: 700;
+      box-shadow: 0 0 0 rgba(245,158,11,0);
+      transition: transform .15s ease, box-shadow .3s ease, opacity .15s ease;
+      animation: glow 2.8s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 0 var(--accent-soft); }
+      50% { box-shadow: 0 0 22px var(--accent-soft); }
+      100% { box-shadow: 0 0 0 var(--accent-soft); }
+    }
+
+    .cta a:hover {
+      transform: translateY(-1px);
+      opacity: 0.9;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+      padding-bottom: 12px;
+    }
+
+    @media (min-width: 640px) {
+      header h1 { font-size: 2.1rem; }
+
+    }
+    @media (max-width:425px){
+        header div{
+        flex-wrap: wrap; justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+
+    <header>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <!-- Foto de perfil (substitua profile.jpg pela sua foto) -->
+        <div class="tilt" style="
+            width:150px;
+            height:150px;
+            border-radius:50%;
+            overflow:hidden;
+            flex-shrink:0;
+            box-shadow:0 8px 25px rgba(0,0,0,.4);
+            border:solid 2px white;">
+          <img src="profile.jpg" alt="Foto do desenvolvedor" style="width:100%; height:100%; object-fit:cover;" />
+        </div>
+        <div>
+          <h1>Soluções Digitais & Programação</h1>
+          <p>
+            Desenvolvimento de soluções práticas para negócios e projetos digitais.
+            Foco em produtos funcionais, código limpo e entrega objetiva.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>O que eu faço</h2>
+      <ul>
+        <li>✔ Desenvolvimento de sites institucionais e landing pages</li>
+        <li>✔ Criação de aplicações web e mobile</li>
+        <li>✔ Automação de processos e scripts sob medida</li>
+        <li>✔ Produtos digitais e soluções técnicas personalizadas</li>
+        <li>✔ Correção de bugs e melhorias em sistemas existentes</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Soluções para negócios</h2>
+      <ul>
+        <li>✔ Registro e otimização de negócios no Google</li>
+        <li>✔ Presença digital profissional</li>
+        <li>✔ Integração com APIs e ferramentas externas</li>
+        <li>✔ Estrutura técnica para crescimento futuro</li>
+      </ul>
+    </section>
+
+    <section class="cta">
+      <h2>Contato direto</h2>
+      <p>Resposta rápida. Escopo claro. Soluções práticas.</p>
+      <a href="https://wa.me/5511914689126" target="_blank">Falar no WhatsApp</a>
+    </section>
+
+    <footer>
+      © 2026 • Soluções Digitais
+    </footer>
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll('.tilt'), {
+      max: 8,
+      speed: 400,
+      glare: true,
+      'max-glare': 0.15,
+      scale: 1.03
+    });
+  </script>
+</body>
+</html>
