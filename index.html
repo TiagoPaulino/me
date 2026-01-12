@@ -1,167 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soluções Digitais | Programação & Produtos</title>
-  <meta name="description" content="Desenvolvimento de sites, aplicativos, automações e soluções digitais sob medida. Programação prática e eficiente." />
-  <!-- Open Graph / WhatsApp -->
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Soluções Digitais & Programação" />
-<meta property="og:description" content="Sites, aplicativos, automações e soluções digitais práticas. Resposta rápida e escopo claro." />
-<meta property="og:image" content="https:/tiagopaulino.github.io/me/og-image.png" />
-<meta property="og:url" content="https:/tiagopaulino.github.io/me/" />
-<meta property="og:locale" content="pt_BR" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soluções Digitais | Programação & Produtos</title>
+    <meta name="description"
+        content="Desenvolvimento de sites, aplicativos, automações e soluções digitais sob medida. Programação prática e eficiente." />
+    <!-- Open Graph / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Soluções Digitais & Programação" />
+    <meta property="og:description"
+        content="Sites, aplicativos, automações e soluções digitais práticas. Resposta rápida e escopo claro." />
+    <meta property="og:image" content="https:/tiagopaulino.github.io/me/og-image.png" />
+    <meta property="og:url" content="https:/tiagopaulino.github.io/me/" />
+    <meta property="og:locale" content="pt_BR" />
 
 
-<!-- Twitter / fallback -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Soluções Digitais & Programação" />
-<meta name="twitter:description" content="Sites, aplicativos, automações e soluções digitais práticas." />
-<meta name="twitter:image" content="https:/tiagopaulino.github.io/me/og-image.png" />
-<meta name="description" content="Desenvolvimento de sites, aplicativos, automações e soluções digitais sob medida. Programação prática e eficiente." />
-  <style>
-    :root {
-/* Light theme (default – better readability) */
-    --bg: #f8fafc;
-    --card: #ffffff;
-    --text: #0f172a;
-    --muted: #475569;
-    /* Accent derived from photo (warm amber) */
-    --accent: #0b78f5;
-    --accent-soft: rgba(160, 212, 255, 0.35);
-    background: linear-gradient(180deg, #deedff, var(--bg));
-    }
+    <!-- Twitter / fallback -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Soluções Digitais & Programação" />
+    <meta name="twitter:description" content="Sites, aplicativos, automações e soluções digitais práticas." />
+    <meta name="twitter:image" content="https:/tiagopaulino.github.io/me/og-image.png" />
+    <meta name="description"
+        content="Desenvolvimento de sites, aplicativos, automações e soluções digitais sob medida. Programação prática e eficiente." />
+    <style>
+        :root {
+            /* Light theme (default – better readability) */
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #0f172a;
+            --muted: #475569;
+            /* Accent derived from photo (warm amber) */
+            --accent: #0b78f5;
+            --accent-soft: rgba(160, 212, 255, 0.35);
+            background: linear-gradient(180deg, #deedff, var(--bg));
+        }
 
 
-    body.dark {
-    --bg: #0f172a;
-    --card: #111827;
-    --text: #e5e7eb;
-    --muted: #9ca3af;
-    background: linear-gradient(180deg, #020617, var(--bg));
-    }
+        body.dark {
+            --bg: #0f172a;
+            --card: #111827;
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+            background: linear-gradient(180deg, #020617, var(--bg));
+        }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, sans-serif;
-      
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      padding: 24px;
-    }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, sans-serif;
 
-    .container {
-      width: 100%;
-      max-width: 720px;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 24px;
+        }
 
-    header {
-      background: var(--card);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.3);
-    }
+        .container {
+            width: 100%;
+            max-width: 720px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
 
-    header h1 {
-      font-size: 1.8rem;
-      margin-bottom: 8px;
-    }
+        header {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+        }
 
-    header p {
-      color: var(--muted);
-      font-size: 1rem;
-      line-height: 1.5;
-    }
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
 
-    section {
-      background: var(--card);
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.3);
-    }
+        header p {
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
 
-    section h2 {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-      color: var(--accent);
-    }
+        section {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+        }
 
-    ul {
-      list-style: none;
-      display: grid;
-      gap: 10px;
-    }
+        section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
 
-    ul li {
-      font-size: 0.95rem;
-      line-height: 1.4;
-    }
+        ul {
+            list-style: none;
+            display: grid;
+            gap: 10px;
+        }
 
-    .cta {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      align-items: center;
-      text-align: center;
-    }
+        ul li {
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
 
-    .cta a {
-      display: inline-block;
-      width: 100%;
-      text-decoration: none;
-      background: linear-gradient(135deg, var(--accent), var(--accent-soft));
-      color: #020617;
-      padding: 14px;
-      border-radius: 12px;
-      font-weight: 700;
-      box-shadow: 0 0 0 rgba(245,158,11,0);
-      transition: transform .15s ease, box-shadow .3s ease, opacity .15s ease;
-      animation: glow 2.8s ease-in-out infinite;
-    }
+        .cta {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+            text-align: center;
+        }
 
-    @keyframes glow {
-      0% { box-shadow: 0 0 0 var(--accent-soft); }
-      50% { box-shadow: 0 0 22px var(--accent-soft); }
-      100% { box-shadow: 0 0 0 var(--accent-soft); }
-    }
+        .cta a {
+            display: inline-block;
+            width: 100%;
+            text-decoration: none;
+            background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+            color: #020617;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 700;
+            box-shadow: 0 0 0 rgba(245, 158, 11, 0);
+            transition: transform .15s ease, box-shadow .3s ease, opacity .15s ease;
+            animation: glow 2.8s ease-in-out infinite;
+        }
 
-    .cta a:hover {
-      transform: translateY(-1px);
-      opacity: 0.9;
-    }
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 0 var(--accent-soft);
+            }
 
-    footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.8rem;
-      padding-bottom: 12px;
-    }
+            50% {
+                box-shadow: 0 0 22px var(--accent-soft);
+            }
 
-    @media (min-width: 640px) {
-      header h1 { font-size: 2.1rem; }
+            100% {
+                box-shadow: 0 0 0 var(--accent-soft);
+            }
+        }
 
-    }
-    @media (max-width:425px){
-        header div{
-        flex-wrap: wrap; justify-content: center;
-      }
-    }
-  </style>
+        .cta a:hover {
+            transform: translateY(-1px);
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.8rem;
+            padding-bottom: 12px;
+        }
+
+        @media (min-width: 640px) {
+            header h1 {
+                font-size: 2.1rem;
+            }
+
+        }
+
+        @media (max-width:425px) {
+            header div {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
-<body class="ligth">
-  <main class="container">
 
-    <header>
-      <div style="display:flex; align-items:center; gap:16px;">
-        <!-- Foto de perfil (substitua profile.jpg pela sua foto) -->
-        <div class="tilt" id="gyro-avatar" style="
+<body class="ligth">
+    <main class="container">
+
+        <header>
+            <div style="display:flex; align-items:center; gap:16px;">
+                <!-- Foto de perfil (substitua profile.jpg pela sua foto) -->
+                <div class="tilt" id="gyro-avatar" style="
             width:150px;
             height:150px;
             border-radius:50%;
@@ -170,20 +191,21 @@
             box-shadow:0 8px 25px rgba(0,0,0,.4);
             border:solid 2px white;
             will-change: transform">
-          <img src="profile.jpg" alt="Foto do desenvolvedor" style="width:100%; height:100%; object-fit:cover;" />
-        </div>
-        <div>
-          <h1>Soluções Digitais & Programação</h1>
-          <p>
-            Desenvolvimento de soluções práticas para negócios e projetos digitais.
-            Foco em produtos funcionais, código limpo e entrega objetiva.
-          </p>
-        </div>
-      </div>
-    </header>
+                    <img src="profile.jpg" alt="Foto do desenvolvedor"
+                        style="width:100%; height:100%; object-fit:cover;" />
+                </div>
+                <div>
+                    <h1>Soluções Digitais & Programação</h1>
+                    <p>
+                        Desenvolvimento de soluções para negócios locais e projetos digitais.
+                        Crio sites, aplicativos e soluções práticas, sem complicação.
+                    </p>
+                </div>
+            </div>
+        </header>
 
-    <section>
-        <h2>O que eu faço</h2>
+        <section>
+            <h2>O que eu faço</h2>
             <ul>
                 <li>✔ Criação de sites para apresentar seu negócio</li>
                 <li>✔ Páginas únicas para divulgação (landing pages)</li>
@@ -212,49 +234,50 @@
         </section>
 
 
-    <footer>
-    © 2026 • Soluções Digitais
-    </footer>
+        <footer>
+            © 2026 • Soluções Digitais
+        </footer>
 
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
-  <script>
-    VanillaTilt.init(document.querySelectorAll('.tilt'), {
-      max: 8,
-      speed: 400,
-      glare: true,
-      'max-glare': 0.15,
-      scale: 1.03
-    });
-  </script>
-  <script>
-/* Gyroscope / Device Orientation for avatar */
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll('.tilt'), {
+            max: 8,
+            speed: 400,
+            glare: true,
+            'max-glare': 0.15,
+            scale: 1.03
+        });
+    </script>
+    <script>
+        /* Gyroscope / Device Orientation for avatar */
         (function () {
-        const avatar = document.getElementById('gyro-avatar');
-        if (!avatar || !window.DeviceOrientationEvent) return;
+            const avatar = document.getElementById('gyro-avatar');
+            if (!avatar || !window.DeviceOrientationEvent) return;
 
 
-        function handleOrientation(event) {
-        const maxTilt = 8; // very subtle
-        const x = Math.max(-maxTilt, Math.min(maxTilt, event.beta / 10));
-        const y = Math.max(-maxTilt, Math.min(maxTilt, event.gamma / 10));
-        avatar.style.transform = `rotateX(${x}deg) rotateY(${y}deg)`;
-        }
+            function handleOrientation(event) {
+                const maxTilt = 8; // very subtle
+                const x = Math.max(-maxTilt, Math.min(maxTilt, event.beta / 10));
+                const y = Math.max(-maxTilt, Math.min(maxTilt, event.gamma / 10));
+                avatar.style.transform = `rotateX(${x}deg) rotateY(${y}deg)`;
+            }
 
 
-        // iOS permission
-        if (typeof DeviceOrientationEvent.requestPermission === 'function') {
-        avatar.addEventListener('click', () => {
-        DeviceOrientationEvent.requestPermission().then(response => {
-        if (response === 'granted') {
-        window.addEventListener('deviceorientation', handleOrientation);
-        }
-        });
-        });
-        } else {
-        window.addEventListener('deviceorientation', handleOrientation);
-        }
+            // iOS permission
+            if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+                avatar.addEventListener('click', () => {
+                    DeviceOrientationEvent.requestPermission().then(response => {
+                        if (response === 'granted') {
+                            window.addEventListener('deviceorientation', handleOrientation);
+                        }
+                    });
+                });
+            } else {
+                window.addEventListener('deviceorientation', handleOrientation);
+            }
         })();
-</script>
+    </script>
 </body>
+
 </html>
